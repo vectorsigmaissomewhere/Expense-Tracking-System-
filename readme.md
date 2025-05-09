@@ -1,5 +1,9 @@
 ## EXPENSE TRACKER 
 
+NOTE:
+```text
+Open it in incognito mode to escape from storing data in chrome localstorage
+```
 Project Motive 
 ```text
 To practice Javascript 
@@ -31,3 +35,4 @@ Project Images
 ![Capture 4](https://github.com/vectorsigmaissomewhere/Expense-Tracking-System-/blob/main/projectimages/capture330.PNG)
 
 ![Capture 5](https://github.com/vectorsigmaissomewhere/Expense-Tracking-System-/blob/main/projectimages/capture331.PNG)
+
