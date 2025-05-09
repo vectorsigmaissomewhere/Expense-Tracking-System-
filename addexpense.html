@@ -32,20 +32,20 @@
             <div class="main-container-dashboard-form">
                 <label>Category</label>
                 <select id="categorySelect">
-                    <option value="">Select a category</option>
+                    <option value="" id="category">Select a category</option>
                 </select>
                 <!--<input type="text" placeholder="Category" id="category"/>-->
             </div>
             <div class="main-container-dashboard-form">
                 <label>Time</label>
-                <input type="text" placeholder="Time"/>
+                <input type="text" placeholder="Time" id="time"/>
             </div>
             <div class="main-container-dashboard-form">
                 <label>Day</label>
-                <input type="text" placeholder="Day"/>
+                <input type="text" placeholder="Day" id="day"/>
             </div>
             <div class="main-container-dashboard-form-button">
-                <button>Submit</button>
+                <button onclick="addExpense()">Submit</button>
             </div>
         </div>
     </div>

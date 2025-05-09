@@ -1,0 +1,52 @@
+const expenses = JSON.parse(localStorage.getItem("expenses")) || [];
+
+  const tbody = document.getElementById("transaction-body");
+
+  const nameFilter = document.getElementById("filter-name");
+  const amountFilter = document.getElementById("filter-amount");
+  const categoryFilter = document.getElementById("filter-category");
+  const timeFilter = document.getElementById("filter-time");
+  const dayFilter = document.getElementById("filter-day");
+
+  function renderTable(data) {
+    tbody.innerHTML = ""; // Clear table
+    data.forEach(exp => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${exp.name}</td>
+        <td>${exp.amount}</td>
+        <td>${exp.category}</td>
+        <td>${exp.time}</td>
+        <td>${exp.day}</td>
+      `;
+      tbody.appendChild(row);
+    });
+  }
+
+  function filterExpenses() {
+    const nameVal = nameFilter.value.toLowerCase();
+    const amountVal = amountFilter.value;
+    const categoryVal = categoryFilter.value.toLowerCase();
+    const timeVal = timeFilter.value.toLowerCase();
+    const dayVal = dayFilter.value.toLowerCase();
+
+    const filtered = expenses.filter(exp => {
+      return (
+        exp.name.toLowerCase().includes(nameVal) &&
+        (amountVal === "" || exp.amount == amountVal) &&
+        exp.category.toLowerCase().includes(categoryVal) &&
+        exp.time.toLowerCase().includes(timeVal) &&
+        exp.day.toLowerCase().includes(dayVal)
+      );
+    });
+
+    renderTable(filtered);
+  }
+
+  // Attach filter listeners
+  [nameFilter, amountFilter, categoryFilter, timeFilter, dayFilter].forEach(input => {
+    input.addEventListener("input", filterExpenses);
+  });
+
+  // Initial render
+  renderTable(expenses);

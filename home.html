@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,82 +8,59 @@
   <title>My Website</title>
   <link rel="stylesheet" href="./styles/home.css" />
 </head>
-<body>
-    <div class="main-container">
-        <div class="main-container-sidebar">
-            <ul>
-                <li class="app-logo">Expense Tracker</li>
-                <li><a href="./home.html">Dashboard</a></li>
-                <li><a href="./addexpense.html">Add Expense</a></li>
-                <li><a href="./transactionhistory.html">Transaction History</a></li>
-                <li><a href="./categorymanagement.html">Category Management</a></li>
-                <li><a href="./settings.html">Settings</a></li>
-            </ul>
-        </div>
 
-        <div class="main-container-dashboard">
-            <div class="main-container-dashboard-balance">
-                <p class="dashboard-text">Your Balance</p>
-                <p class="dashboard-text">$14, 231.00</P>
-            </div>
-            <div class="main-container-dashboard-threediv">
-                <div class="main-container-dashboard-eachdiv">
-                    <p class="dashboard-text">$3,021.00</p>
-                    <p class="dashboard-text">Home</p>
-                </div>
-                <div class="main-container-dashboard-eachdiv">
-                    <p class="dashboard-text">$2,100.00</p>
-                    <p class="dashboard-text">Electricity</p>
-                </div>
-                <div class="main-container-dashboard-eachdiv"> 
-                    <p class="dashboard-text">$2,200.00</p>
-                    <p class="dashboard-text">Garden</p>
-                </div>
-            </div>
-            <h2>Recent Expenses</h2>
-            <div class="main-container-dashboard-transaction">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Transaction Name</th>
-                        <th>Amount</th>
-                        <th>Time</time>
-                    </tr>
-                </thead>
-                    <tr>
-                        <td>Alfreds Futterkiste</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                      </tr>
-                      <tr>
-                        <td>Centro comercial Moctezuma</td>
-                        <td>Francisco Chang</td>
-                        <td>Mexico</td>
-                      </tr>
-                      <tr>
-                        <td>Alfreds Futterkiste</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                      </tr>
-                      <tr>
-                        <td>Centro comercial Moctezuma</td>
-                        <td>Francisco Chang</td>
-                        <td>Mexico</td>
-                      </tr>
-                      <tr>
-                        <td>Alfreds Futterkiste</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                      </tr>
-                      <tr>
-                        <td>Centro comercial Moctezuma</td>
-                        <td>Francisco Chang</td>
-                        <td>Mexico</td>
-                      </tr>
-                </table>
-            </div>
-        </div>
+<body>
+  <div class="main-container">
+    <div class="main-container-sidebar">
+      <ul>
+        <li class="app-logo">Expense Tracker</li>
+        <li><a href="./home.html">Dashboard</a></li>
+        <li><a href="./addexpense.html">Add Expense</a></li>
+        <li><a href="./transactionhistory.html">Transaction History</a></li>
+        <li><a href="./categorymanagement.html">Category Management</a></li>
+        <li><a href="./settings.html">Settings</a></li>
+      </ul>
     </div>
+
+    <div class="main-container-dashboard">
+      <div class="main-container-dashboard-balance">
+        <p class="dashboard-text">Total Expense</p>
+        <p class="dashboard-text" id="expensesnumber">00.00</P>
+      </div>
+      <div class="main-container-dashboard-threediv">
+        <div class="main-container-dashboard-eachdiv">
+          <p class="dashboard-text" id="firstcategoryamount">$00.00</p>
+          <p class="dashboard-text" id="firstcategoryname">Empty</p>
+        </div>
+        <div class="main-container-dashboard-eachdiv">
+          <p class="dashboard-text" id="secondcategoryamount">$00.00</p>
+          <p class="dashboard-text" id="secondcategoryname">Empty</p>
+        </div>
+        <div class="main-container-dashboard-eachdiv">
+          <p class="dashboard-text" id="thirdcategoryamount">$00.00</p>
+          <p class="dashboard-text" id="thirdcategoryname">Empty</p>
+        </div>
+      </div>
+      <h2>Recent Expenses</h2>
+      <div class="main-container-dashboard-transaction">
+        <table>
+          <thead>
+            <tr>
+              <th>Transaction Name</th>
+              <th>Amount</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody id="expense-table-body">
+            <!-- JS will inject rows here -->
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
   <script src="./js/settings.js"></script>
+  <script src="./js/dashboard.js"></script>
 </body>
+
 </html>

@@ -12,7 +12,7 @@ if (somevalue === "black") {
     document.getElementById("settings-dashboard").style.color = "white";
 } else {
     //document.getElementById("color-status").textContent = "White";
-    document.body.style.backgroundColor = "white"; // ✅ Fixed here
+    document.body.style.backgroundColor = "white"; 
     //document.body.style.color = "black";
     document.getElementById("changestatus").checked = false;
     document.getElementById("settings-dashboard").style.color = "black";

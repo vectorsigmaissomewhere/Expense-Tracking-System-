@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transaction History</title>
     <link rel="stylesheet" href="./styles/transactionhistory.css" />
 </head>
+
 <body>
     <div class="main-container">
         <div class="main-container-sidebar">
@@ -24,84 +26,46 @@
             <div class="main-container-dashboard-filter">
                 <div class="main-container-dashboard-filter-each">
                     <label>Transaction Name</label>
-                    <input type="text"/>
+                    <input type="text" id="filter-name" />
                 </div>
-                <diV class="main-container-dashboard-filter-each">
+                <div class="main-container-dashboard-filter-each">
                     <label>Amount</label>
-                    <input type="text"/>
-                </diV>
+                    <input type="text" id="filter-amount" />
+                </div>
                 <div class="main-container-dashboard-filter-each">
                     <label>Category</label>
-                    <input type="catageory"/>
+                    <input type="text" id="filter-category" />
                 </div>
                 <div class="main-container-dashboard-filter-each">
                     <label>Time</label>
-                    <input type="text"/>
+                    <input type="text" id="filter-time" />
                 </div>
                 <div class="main-container-dashboard-filter-each">
                     <label>Day</label>
-                    <input type="text"/>
+                    <input type="text" id="filter-day" />
                 </div>
+
             </div>
             <!--these are the tables -->
             <div class="main-container-dashboard-transaction">
                 <table>
                     <thead>
-                    <tr>
-                        <th>Transaction Name</th>
-                        <th>Amount</th>
-                        <th>Category</th>
-                        <th>Time</time>
-                        <th>Day</th>
-                    </tr>
-                </thead>
-                    <tr>
-                        <td>Alfreds Futterkiste</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                      </tr>
-                      <tr>
-                        <td>Centro comercial Moctezuma</td>
-                        <td>Francisco Chang</td>
-                        <td>Mexico</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                      </tr>
-                      <tr>
-                        <td>Alfreds Futterkiste</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                      </tr>
-                      <tr>
-                        <td>Centro comercial Moctezuma</td>
-                        <td>Francisco Chang</td>
-                        <td>Mexico</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                      </tr>
-                      <tr>
-                        <td>Alfreds Futterkiste</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                      </tr>
-                      <tr>
-                        <td>Centro comercial Moctezuma</td>
-                        <td>Francisco Chang</td>
-                        <td>Mexico</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                      </tr>
+                        <tr>
+                            <th>Transaction Name</th>
+                            <th>Amount</th>
+                            <th>Category</th>
+                            <th>Time</time>
+                            <th>Day</th>
+                        </tr>
+                    </thead>
+                    <tbody id="transaction-body"></tbody>
                 </table>
             </div>
 
         </div>
     </div>
     <script src="./js/settings.js"></script>
+    <script src="./js/transactionhistory,js"></script>
 </body>
+
 </html>
