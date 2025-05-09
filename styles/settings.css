@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
+
+body {
+    font-family: 'Cal Sans', sans-serif;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    gap: 6%;
+}
+
+/*building the sidebar*/
+.main-container .main-container-sidebar {
+    background-color: rgb(244, 243, 243);
+    width: 20%;
+}
+
+.main-container .main-container-sidebar ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 2rem;
+}
+
+.main-container .main-container-sidebar ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.main-container .main-container-sidebar ul li a:hover{
+    color: rgb(215, 26, 215);
+}
+
+.main-container .main-container-sidebar ul li:first-child {
+    color: rgb(215, 26, 215);
+}
+
+.main-container .main-container-sidebar ul li {
+    /*background-color: rgb(104, 130, 130);*/
+    padding: 20px;
+    margin-right: 30px;
+}
+
+.main-container .main-container-sidebar ul li:nth-child(2):hover {
+    color: rgb(215, 26, 215);
+    background-color: rgb(226, 213, 213);
+    cursor: pointer;
+}
+
+.main-container .main-container-sidebar ul li:nth-child(3):hover {
+    color: rgb(215, 26, 215);
+    background-color: rgb(226, 213, 213);
+    cursor: pointer;
+}
+
+.main-container .main-container-sidebar ul li:nth-child(4):hover {
+    color: rgb(215, 26, 215);
+    background-color: rgb(226, 213, 213);
+    cursor: pointer;
+}
+
+.main-container .main-container-sidebar ul li:nth-child(5):hover {
+    color: rgb(215, 26, 215);
+    background-color: rgb(226, 213, 213);
+    cursor: pointer;
+}
+
+.main-container .main-container-sidebar ul li:nth-child(6):hover {
+    color: rgb(215, 26, 215);
+    background-color: rgb(226, 213, 213);
+    cursor: pointer;
+}
+
+.main-container .main-container-sidebar ul li:nth-child(7):hover {
+    color: rgb(215, 26, 215);
+    background-color: rgb(226, 213, 213);
+    cursor: pointer;
+}
+
+/*building the right side */
+.main-container .main-container-dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+    width: 100%;
+}
+
+.main-container .main-container-dashboard h2{
+    display: flex;
+    justify-content: center;
+    font-weight: 100;
+    font-size: 3rem;
+}
+
+/* slider */
+.main-container .main-container-dashboard .main-container-dashboard-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 24px;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.3s;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.toggle-switch input:checked+.slider {
+    background-color: red;
+}
+
+.toggle-switch input:checked+.slider::before {
+    transform: translateX(26px);
+}
+
+
+/*responsiveness*/
+@media only screen and (max-width:1444px) {
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-container .main-container-sidebar {
+        width: 100%;
+    }
+
+    .main-container .main-container-sidebar ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        font-size: 1rem;
+    }
+
+    /*building the right side */
+    .main-container .main-container-dashboard {
+        gap: 2%;
+        max-width: 100%;
+    }  
+}

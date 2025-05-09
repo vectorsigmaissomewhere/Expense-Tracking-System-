@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
+
+body {
+    font-family: 'Cal Sans', sans-serif;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    gap: 6%;
+}
+
+/*building the sidebar*/
+.main-container .main-container-sidebar {
+    background-color: rgb(244, 243, 243);
+    width: 20%;
+}
+
+.main-container .main-container-sidebar ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 2rem;
+}
+
+.main-container .main-container-sidebar ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.main-container .main-container-sidebar ul li a:hover{
+    color: rgb(215, 26, 215);
+}
+
+.main-container .main-container-sidebar ul li:first-child {
+    color: rgb(215, 26, 215);
+}
+
+.main-container .main-container-sidebar ul li {
+    /*background-color: rgb(104, 130, 130);*/
+    padding: 20px;
+    margin-right: 30px;
+}
+
+.main-container .main-container-sidebar ul li:nth-child(2):hover {
+    color: rgb(215, 26, 215);
+    background-color: rgb(226, 213, 213);
+    cursor: pointer;
+}
+
+.main-container .main-container-sidebar ul li:nth-child(3):hover {
+    color: rgb(215, 26, 215);
+    background-color: rgb(226, 213, 213);
+    cursor: pointer;
+}
+
+.main-container .main-container-sidebar ul li:nth-child(4):hover {
+    color: rgb(215, 26, 215);
+    background-color: rgb(226, 213, 213);
+    cursor: pointer;
+}
+
+.main-container .main-container-sidebar ul li:nth-child(5):hover {
+    color: rgb(215, 26, 215);
+    background-color: rgb(226, 213, 213);
+    cursor: pointer;
+}
+
+.main-container .main-container-sidebar ul li:nth-child(6):hover {
+    color: rgb(215, 26, 215);
+    background-color: rgb(226, 213, 213);
+    cursor: pointer;
+}
+
+.main-container .main-container-sidebar ul li:nth-child(7):hover {
+    color: rgb(215, 26, 215);
+    background-color: rgb(226, 213, 213);
+    cursor: pointer;
+}
+
+/*building the right side */
+.main-container .main-container-dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+    width: 100%;
+}
+
+.main-container .main-container-dashboard h2{
+    display: flex;
+    justify-content: center;
+    font-weight: 100;
+    font-size: 3rem;
+}
+
+.main-container .main-container-dashboard .main-container-dashboard-filter{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.main-container .main-container-dashboard .main-container-dashboard-filter-each{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.main-container .main-container-dashboard .main-container-dashboard-filter-each label{
+    font-size: 25px;
+}
+
+.main-container .main-container-dashboard .main-container-dashboard-filter-each input{
+    width: 100%;
+    font-size: 25px;
+}
+
+/* for the table*/
+.main-container .main-container-dashboard .main-container-dashboard-transaction {
+    background-color: rgb(244, 243, 243);
+}
+
+.main-container .main-container-dashboard .main-container-dashboard-transaction table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.main-container .main-container-dashboard .main-container-dashboard-transaction table tr {
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.main-container .main-container-dashboard .main-container-dashboard-transaction table th {
+    font-size: 20px;
+    padding-left: 5px;
+}
+
+.main-container .main-container-dashboard .main-container-dashboard-transaction table td {
+    font-size: 18px;
+    padding-left: 5px;
+}
+
+
+/*responsiveness*/
+@media only screen and (max-width:1444px) {
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-container .main-container-sidebar {
+        width: 100%;
+    }
+
+    .main-container .main-container-sidebar ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        font-size: 1rem;
+    }
+
+    /*building the right side */
+    .main-container .main-container-dashboard {
+        gap: 2%;
+        max-width: 100%;
+    }  
+}

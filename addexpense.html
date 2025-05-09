@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Expense</title>
+    <link rel="stylesheet" href="./styles/addexpense.css" />
+</head>
+<body>
+    <div class="main-container">
+        <div class="main-container-sidebar">
+            <ul>
+                <li class="app-logo">Expense Tracker</li>
+                <li><a href="./home.html">Dashboard</a></li>
+                <li><a href="./addexpense.html">Add Expense</a></li>
+                <li><a href="./transactionhistory.html">Transaction History</a></li>
+                <li><a href="./categorymanagement.html">Category Management</a></li>
+                <li><a href="./settings.html">Settings</a></li>
+            </ul>
+        </div>
+
+        <div class="main-container-dashboard" id="main-container-dashboard-addexpense">
+            <h2>Add Expenses</h2>
+            <div class="main-container-dashboard-form">
+                <label>Expenses Name</label>
+                <input type="text" placeholder="Expense Name" id="name"/>
+            </div>
+            <div class="main-container-dashboard-form">
+                <label>Amount</label>
+                <input type="number" placeholder="Amount" id="amount"/>
+            </div>
+            <div class="main-container-dashboard-form">
+                <label>Category</label>
+                <select id="categorySelect">
+                    <option value="">Select a category</option>
+                </select>
+                <!--<input type="text" placeholder="Category" id="category"/>-->
+            </div>
+            <div class="main-container-dashboard-form">
+                <label>Time</label>
+                <input type="text" placeholder="Time"/>
+            </div>
+            <div class="main-container-dashboard-form">
+                <label>Day</label>
+                <input type="text" placeholder="Day"/>
+            </div>
+            <div class="main-container-dashboard-form-button">
+                <button>Submit</button>
+            </div>
+        </div>
+    </div>
+    <script src="./js/settings.js"></script>
+    <script src="./js/addexpense.js"></script>
+</body>
+</html>

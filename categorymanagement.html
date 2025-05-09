@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Management</title>
+    <link rel="stylesheet" href="./styles/categorymanagement.css" />
+</head>
+<body>
+    <div class="main-container">
+        <div class="main-container-sidebar">
+            <ul>
+                <li class="app-logo">Expense Tracker</li>
+                <li><a href="./home.html">Dashboard</a></li>
+                <li><a href="./addexpense.html">Add Expense</a></li>
+                <li><a href="./transactionhistory.html">Transaction History</a></li>
+                <li><a href="./categorymanagement.html">Category Management</a></li>
+                <li><a href="./settings.html">Settings</a></li>
+            </ul>
+        </div>
+
+        <div class="main-container-dashboard">
+            <h2>Category Management</h2>
+            <div class="main-container-dashboard-addcategory">
+                <label>Add Category</label>
+                <input type="text" id="categoryInput" placeholder="Enter category name"/>
+                <button onclick="addCategory()">Submit</button>
+            </div>
+            <!--these are the tables -->
+            <div class="main-container-dashboard-category">
+                <table>
+                  <thead>
+                    <tr>
+                        <th>S.N.</th>
+                        <th>Category</th>
+                        <th>Delete</th>
+                        <th>Update</time>
+                    </tr>
+                </thead>
+                    <tbody id="categoryTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="./js/settings.js"></script>
+    <script src="./js/categorymanage.js"></script>
+</body>
+</html>
